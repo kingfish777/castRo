@@ -11,4 +11,5 @@ more on frames: http://truth-out.org/progressivepicks/item/12401-george-lakoff-p
 
 and a bit more: http://fora.tv/2007/11/07/Deceiving_Image_The_Science_of_Manipulation
 
+finally, this gem: http://www.youtube.com/watch?v=f55ZsrXQ8Pg
 
