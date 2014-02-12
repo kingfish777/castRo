@@ -13,3 +13,8 @@ and a bit more: http://fora.tv/2007/11/07/Deceiving_Image_The_Science_of_Manipul
 
 finally, this gem: http://www.youtube.com/watch?v=f55ZsrXQ8Pg
 
+TO DO:
+
+ * add comprehensive bibliography
+ * describe is pseudocode procedures to identify volatile spots between instances of same text collection
+
