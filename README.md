@@ -16,5 +16,5 @@ finally, this gem: http://www.youtube.com/watch?v=f55ZsrXQ8Pg
 TO DO:
 
  * add comprehensive bibliography
- * describe is pseudocode procedures to identify volatile spots between instances of same text collection
+ * compose procedure pseudocode that would identify volatile spots between multiple instances of same text collection
 
