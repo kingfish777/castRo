@@ -18,3 +18,13 @@ TO DO:
  * add comprehensive bibliography
  * compose procedure pseudocode that would identify volatile spots between multiple instances of same text collection
 
+--------------------------
+Fatigued Bibliography:
+
+Comprehensive Manifesto Project: https://manifesto-project.wzb.eu/
+
+Drew Conway's excellent text mining in comparative politics work: http://drewconway.com/zia/2013/12/10/talk-at-kickstarter
+	                               
+	                               
+	                             
+	                               
