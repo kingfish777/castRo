@@ -21,7 +21,7 @@ TO DO:
   * also use unique function in RTextTools package to obtain k for topic model #: http://www.rtexttools.com/1/post/2011/08/getting-started-with-latent-dirichlet-allocation-using-rtexttools-topicmodels.html
 
 --------------------------
-Fatigued Bibliography:
+"Fatigued" Bibliography:
 
 Comprehensive Manifesto Project: https://manifesto-project.wzb.eu/
 
