@@ -1,21 +1,21 @@
-
 Sys.setenv(NOAWT = TRUE) 
-library("calibrate")
-library("Snowball")
-library("SnowballC")
-library("Rstem")
-library("tm")
-library("lsa")
-library("topicmodels")
-library("lda")
-library("ape")
-library("rgl")
-library("RWeka")
-library("Rgraphviz")
-library("igraph")
-library("rjson")
-library("gsubfn")
-library("sqldf")
+library(calibrate)
+library(Snowball)
+library(SnowballC)
+library(Rstem)
+library(tm)
+library(lsa)
+library(topicmodels)
+library(lda)
+library(ape)
+library(rgl)
+library(RWeka)
+library(Rgraphviz)
+library(igraph)
+library(rjson)
+library(gsubfn)
+library(sqldf)
+library(RTextTools)
 
 #startYear = 1958
 #endYear = 1996
@@ -43,10 +43,18 @@ corpus <- tm_map(corpus, stripWhitespace)
 print("stemming")
 corpus <- tm_map(corpus, stemDocument, language="english")
 
-BiGramTokenizer <- function(x) RWeka::NGramTokenizer(x, Weka_control(min = 2, max = 2))
+#BiGramTokenizer <- function(x) RWeka::NGramTokenizer(x, Weka_control(min = 2, max = 2))
 #dtm <- DocumentTermMatrix(corpus, control = list(weighting = function(x) weightTfIdf(x, normalize = TRUE), tokenize=yourTokenizer, stopwords = TRUE))
 
-dtm = TermDocumentMatrix(corpus, control = list(weighting = weightTf, removePunctuation = TRUE, removeNumbers = TRUE, stopwords = TRUE, minWordLength = 4))
+#dtm = TermDocumentMatrix(corpus, control = list(weighting = weightTf, removePunctuation = TRUE, removeNumbers = TRUE, stopwords = TRUE, minWordLength = 4))
+
+dtm <- create_matrix(cbind(as.vector(corpus)), language="english", minDocFreq=1, maxDocFreq=Inf, 
+              minWordLength=3, maxWordLength=Inf, ngramLength=3, originalMatrix=NULL, 
+              removeNumbers=TRUE, removePunctuation=TRUE, removeSparseTerms=0, 
+              removeStopwords=TRUE,  stemWords=FALSE, stripWhitespace=TRUE, toLower=TRUE, 
+              weighting=weightTf)
+rowTotals <- apply(dtm , 1, sum) #Find the sum of words in each Document
+dtm   <- dtm[rowTotals> 0]           #remove all docs without words
 
 dtm <- removeSparseTerms(dtm, .98)
 rownames(dtm) = stemCompletion(rownames(dtm), corpus_orig)
