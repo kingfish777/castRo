@@ -1,22 +1,23 @@
-library("calibrate")
-library("tm")
-library("lsa")
-#library("topicmodels")
-library("lda")
-#library("gsubfn")
-library("ggplot2")
-library("reshape2")
-#library("ape")
-library("rgl")
-library("rJava")
-library("RWeka")
-library("RWekajars")
-library("Rgraphviz")
-library("MASS")
-library("slam")
-#library("igraph")
-library("RTextTools")
-
+library(calibrate)
+library(tm)
+library(lsa)
+#library(topicmodels)
+library(lda)
+#library(gsubfn)
+library(ggplot2)
+library(reshape2)
+#library(ape)
+library(rgl)
+library(rJava)
+library(RWeka)
+library(RWekajars)
+library(Rgraphviz)
+library(MASS)
+library(slam)
+#library(igraph)
+library(RTextTools)
+#################################
+#################################
 years = list(40)
 years = sequence(20)+1986
 #year = 1985
@@ -30,7 +31,7 @@ interestingList = list("john kennedy", "richard nixon", "president")
 #interestingList = list("imperialist", "fascist", "exploiter", "democracy", "classless society", "antifascist", "zionist", "counterrevolutionary")
 #interestingList = list("cuban", "bulgarian", "chillean", "israeli", "america")
 #interestingList = list("television", "radio", "propaganda", "computer", "technology", "information")
-#interestingList = list("direct action", "terrorism", "assassinatoin", "plot", "conspiracy", "counterrevolutionary", "imperialism")
+#interestingList = list("direct action", "terrorism", "assassination", "plot", "conspiracy", "counterrevolutionary", "imperialism")
 interestingList = list("genocide", "guatemala", "torture", "mass graves", "sandanista", "contras")
 interestingList = list("richard nixon", "nixon", "vietnam", "vietnamese", "kissinger")
 interestingList = list("surveillance", "propaganda", "espionage", "spies", "spy", "provocation")
@@ -91,7 +92,6 @@ plotDefaultYearByYear <- function(years)
   tdm <- TermDocumentMatrix(corpus, control = list(weighting = function(x) weightTfIdf(x, normalize = FALSE), tokenize=yourTokenizer, stopwords = TRUE))
   tdm <- removeSparseTerms(tdm, .95)
   #dtm <- DocumentTermMatrix(corpus, control = list(weighting = function(x) weightTfIdf(x, normalize = FALSE), tokenize=yourTokenizer, stopwords = TRUE))
-  
   dtm <- create_matrix(cbind(as.vector(corpus)), language="english", minDocFreq=1, maxDocFreq=Inf, 
               minWordLength=3, maxWordLength=Inf, ngramLength=3, originalMatrix=NULL, 
               removeNumbers=FALSE, removePunctuation=TRUE, removeSparseTerms=0, 
@@ -155,12 +155,11 @@ plotDefaultYearByYear <- function(years)
               
               scan()
               #pause()
-            }      
+             }      
             }
             #class(t)
             #plot(dtm, terms = t, legend=yearStr)
-            } 
-        
+          } 
       }
     #  association_index <- association_index + 1
     } 
