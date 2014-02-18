@@ -1,6 +1,7 @@
 library(XML)
 library(tm)
 library(RCurl)
+library(openNLP)
 url <- "http://clover.slavic.pitt.edu/sam/propp/have_a_little_byte/magicgeese.xml"
 #url <- "http://www.maleclabs.com/Propp/Corpus.xml"
 tale <- xmlTreeParse(getURL(url), useInternal = T)
@@ -8,11 +9,7 @@ tale
 initsit <- xmlValue(getNodeSet(tale, "//Corpus//Folktale//Move//Preparation//InitialSituation")[[1]]);
 initsit
 return <- xmlValue(getNodeSet(tale, "//Corpus//Folktale//Move//Return")[[1]])
-return;
-
-
-library(openNLP)
+return
 # sentDetect(initsit, language = "en", model = NULL)
-y <- tagPOS(initsit, language = "en", model = NULL, tagdict = NULL)
-
-y
+taggedSegment <- tagPOS(initsit, language = "en", model = NULL, tagdict = NULL)
+taggedSegment
