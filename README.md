@@ -28,6 +28,8 @@ Comprehensive Manifesto Project: https://manifesto-project.wzb.eu/
 
 Drew Conway's excellent text mining in comparative politics work: http://drewconway.com/zia/2013/12/10/talk-at-kickstarter
 	                               
-	                               
+Classic work on matrix math and pattern recognition: http://econ109.econ.bbk.ac.uk/brad/datamining/research_surveys/elden.pdf
+
+SOUNDTRACK: http://www.leftbusinessobserver.com/Radio.html
 	                             
 	                               
