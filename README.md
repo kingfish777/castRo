@@ -1,7 +1,9 @@
 castRo
 ======
 
-adventures in text mining 
+adventures in text mining : "programming styles are like assholes: everybody's got one"
+
+______________________________________________
 
 data source: http://lanic.utexas.edu/project/castro/db/
 
