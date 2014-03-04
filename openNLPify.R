@@ -2,6 +2,7 @@ library(XML)
 library(tm)
 library(RCurl)
 library(openNLP)
+#see tm::writecorpus() in gnaReme repository
 url <- "http://clover.slavic.pitt.edu/sam/propp/have_a_little_byte/magicgeese.xml"
 #url <- "http://www.maleclabs.com/Propp/Corpus.xml"
 tale <- xmlTreeParse(getURL(url), useInternal = T)
